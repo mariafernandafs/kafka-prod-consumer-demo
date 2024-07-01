@@ -14,16 +14,22 @@ https://kafka.apache.org/downloads
 [dica= para não obter erro no windos dizendo que o "comando é muito longo", experimente extrai-lo na raiz]
 
 - execute o kafka server com comando abaixo:
+```
 C:\kafka_2.13-3.7.0> .\bin\windows\kafka-server-start.bat .\config\server.properties
+```
 INFO shutting down (kafka.server.KafkaServer)
 [ocorrerá o erro acima, isso acontece porque O Kafka depende do Zookeeper - é ele que gerencia os metadados e coordena os clusters]
 
 - execute o zookeeper com comando abaixo:
+```
 C:\kafka_2.13-3.7.0> .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+```
 [zookeeper roda na porta 2181]
 
 - agora sim, volte a executar o kafka server com o mesmo comando informado acima:
+```
 C:\kafka_2.13-3.7.0> .\bin\windows\kafka-server-start.bat .\config\server.properties
+```
 Logs:
 ```
 [2024-06-30 10:28:59,829] INFO starting (kafka.server.KafkaServer)
